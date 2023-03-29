@@ -5,6 +5,7 @@ import Heading from "./components/Heading/Heading";
 import AddTodo from "./components/AddTodo/AddTodo";
 import FilterTodo from "./components/FilterTodo/FilterTodo";
 import DeleteAllTodo from "./components/DeleteAllTodo/DeleteAllTodo";
+import TodoList from "./components/TodoList/TodoList";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <FilterTodo />
         <DeleteAllTodo />
       </div>
+      <TodoList />
     </>
   );
 }
