@@ -16,7 +16,6 @@ function App() {
         <FilterTodo />
         <DeleteAllTodo />
       </div>
-      <TodoList />
     </>
   );
 }

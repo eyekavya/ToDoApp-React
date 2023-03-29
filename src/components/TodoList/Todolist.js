@@ -1,13 +1,13 @@
 import React from "react";
 import { StyledTodoList } from "./StyledTodoList";
 
-function TodoList() {
+function TodoList(props) {
   return (
     <StyledTodoList>
       <div className="flex-basic">
         <ul className="todo-list">
           <div className="todo">
-            <li className="todo-item"></li>
+            <li className="todo-item">{props.todo}</li>
             <button className="completed-btn">
               <i className="fas fa-check"></i>
             </button>
