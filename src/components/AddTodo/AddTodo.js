@@ -3,18 +3,18 @@ import TodoList from "../TodoList/TodoList";
 import { StyledAddTodo } from "./StyledAddTodo";
 
 function AddTodo() {
+  const [inputText, setInputText] = useState("");
   const [todo, setTodo] = useState([]);
   const [showTodoList, setShowTodoList] = useState(false);
 
-  let inputTodo = "";
-
   const handleChange = (event) => {
-    inputTodo = event.target.value;
+    setInputText(event.target.value);
   };
 
   const onAddTodo = () => {
     setShowTodoList(true);
-    setTodo([...todo, inputTodo]);
+    setTodo([...todo, inputText]);
+    setInputText("");
   };
 
   return (
