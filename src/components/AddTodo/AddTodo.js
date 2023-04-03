@@ -11,7 +11,7 @@ function AddTodo({ todo, setTodo }) {
 
   const onAddTodo = () => {
     if (inputText) {
-      setTodo([...todo, inputText]);
+      setTodo([...todo, { todo: inputText, completed: false }]);
       setInputText("");
     }
   };
@@ -28,7 +28,15 @@ function AddTodo({ todo, setTodo }) {
         <i className="fas fa-plus-square"></i>
       </button>
       {todo.map((e, i) => {
-        return <TodoList key={i} todoitem={e} todo={todo} />;
+        return (
+          <TodoList
+            key={i}
+            todoitem={e.todo}
+            todo={todo}
+            setTodo={setTodo}
+            index={i}
+          />
+        );
       })}
     </StyledAddTodo>
   );

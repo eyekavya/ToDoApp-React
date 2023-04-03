@@ -40,7 +40,13 @@ export const StyledTodoList = styled.section`
   }
 
   .fa-trash,
-  .fa-check {
+  .fa-check,
+  .fa-xmark {
     pointer-events: none;
+  }
+
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
   }
 `;
