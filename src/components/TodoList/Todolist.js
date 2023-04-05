@@ -2,13 +2,16 @@ import React from "react";
 import { StyledTodoList } from "./StyledTodoList";
 
 function TodoList({ todoitem, todo, setTodo, index }) {
-  const onDeleteTodo = () => {
-    return todo.filter((item) => item !== todoitem);
-  };
-
   const onComplete = () => {
     todo[index].completed = !todo[index].completed;
     setTodo([...todo]);
+    console.log(todo);
+  };
+
+  const onDeleteTodo = () => {
+    todo.splice(index, 1);
+    setTodo([...todo]);
+    console.log(todo);
   };
 
   return (
