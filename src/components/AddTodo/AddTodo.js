@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import TodoList from "../TodoList/TodoList";
 import { StyledAddTodo } from "./StyledAddTodo";
 
 function AddTodo({ todo, setTodo }) {
@@ -27,17 +26,6 @@ function AddTodo({ todo, setTodo }) {
       <button type="submit" className="todo-btn" onClick={onAddTodo}>
         <i className="fas fa-plus-square"></i>
       </button>
-      {todo.map((e, i) => {
-        return (
-          <TodoList
-            key={i}
-            todoitem={e.todo}
-            todo={todo}
-            setTodo={setTodo}
-            index={i}
-          />
-        );
-      })}
     </StyledAddTodo>
   );
 }
