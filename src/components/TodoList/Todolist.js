@@ -3,6 +3,7 @@ import { StyledTodoList } from "./StyledTodoList";
 
 function TodoList({ todo, setTodo, selectValue }) {
   const [filteredTodo, setFilteredTodo] = useState(todo);
+
   const onComplete = (i) => {
     todo[i].completed = !todo[i].completed;
     setTodo([...todo]);
