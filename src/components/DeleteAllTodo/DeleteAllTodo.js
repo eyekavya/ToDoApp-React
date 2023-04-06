@@ -1,9 +1,10 @@
 import React from "react";
 import { StyledDeleteAllTodo } from "./StyledDeleteAllTodo";
 
-function DeleteAllTodo({ setTodo }) {
+function DeleteAllTodo({ setTodo, setSelectValue }) {
   const onDeleteAll = () => {
     setTodo([]);
+    setSelectValue("all");
   };
 
   return (

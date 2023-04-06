@@ -15,8 +15,12 @@ function App() {
       <Heading />
       <div className="flex-basic">
         <AddTodo todo={todo} setTodo={setTodo} />
-        <FilterTodo setSelectValue={setSelectValue} todo={todo} />
-        <DeleteAllTodo setTodo={setTodo} />
+        <FilterTodo
+          selectValue={selectValue}
+          setSelectValue={setSelectValue}
+          todo={todo}
+        />
+        <DeleteAllTodo setTodo={setTodo} setSelectValue={setSelectValue} />
       </div>
       <TodoList todo={todo} setTodo={setTodo} selectValue={selectValue} />
     </>

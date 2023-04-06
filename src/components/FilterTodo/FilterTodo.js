@@ -1,6 +1,6 @@
 import { StyledFilterTodo } from "./StyledFilterTodo";
 
-function FilterTodo({ setSelectValue }) {
+function FilterTodo({ setSelectValue, selectValue }) {
   const handleSelectChange = (event) => {
     setSelectValue(event.target.value);
   };
@@ -12,6 +12,7 @@ function FilterTodo({ setSelectValue }) {
           name="todos"
           className="filter-todo"
           onChange={handleSelectChange}
+          value={selectValue}
         >
           <option value="all">All</option>
           <option value="completed">Completed</option>
