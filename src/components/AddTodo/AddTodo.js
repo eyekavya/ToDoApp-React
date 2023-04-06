@@ -22,6 +22,11 @@ function AddTodo({ todo, setTodo }) {
         className="todo-input"
         onChange={handleChange}
         value={inputText}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            onAddTodo();
+          }
+        }}
       />
       <button type="submit" className="todo-btn" onClick={onAddTodo}>
         <i className="fas fa-plus-square"></i>
