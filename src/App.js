@@ -1,9 +1,30 @@
 import "./App.css";
 
-import React from "react";
+import { useState } from "react";
+import Heading from "./components/Heading/Heading";
+import AddTodo from "./components/AddTodo/AddTodo";
+import FilterTodo from "./components/FilterTodo/FilterTodo";
+import DeleteAllTodo from "./components/DeleteAllTodo/DeleteAllTodo";
+import TodoList from "./components/TodoList/TodoList";
 
 function App() {
-  return <div>To Do</div>;
+  const [todo, setTodo] = useState([]);
+  const [selectValue, setSelectValue] = useState("all");
+  return (
+    <>
+      <Heading />
+      <div className="flex-basic">
+        <AddTodo todo={todo} setTodo={setTodo} />
+        <FilterTodo
+          selectValue={selectValue}
+          setSelectValue={setSelectValue}
+          todo={todo}
+        />
+        <DeleteAllTodo setTodo={setTodo} setSelectValue={setSelectValue} />
+      </div>
+      <TodoList todo={todo} setTodo={setTodo} selectValue={selectValue} />
+    </>
+  );
 }
 
 export default App;
