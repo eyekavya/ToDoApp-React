@@ -5,7 +5,7 @@ function Heading() {
   return (
     <StyledHeading>
       <header>
-        <h1>Kavya's TO-DO List</h1>
+        <h1>Get it DONE!</h1>
       </header>
     </StyledHeading>
   );
